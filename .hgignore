@@ -1,0 +1,7 @@
+glob:*.user
+glob:*.opensdf
+glob:*.suo
+glob:Release/*
+glob:ipch/*
+glob:*.sdf
+glob:Debug/*

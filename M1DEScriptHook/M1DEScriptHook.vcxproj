@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8D715BC3-5BBC-42E2-9F0D-29FBAFB6490B}</ProjectGuid>
+    <RootNamespace>M1DEScriptHook</RootNamespace>
+    <ProjectName>M1DEScriptHook</ProjectName>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>C:\Users\Joel\include;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)build\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build\$(Configuration)\tmp\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>C:\Users\Joel\include;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)build\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build\$(Configuration)\tmp\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>include;..\shared\include;..\vendor\LUA</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>LUA_BUILD_AS_DLL;LUA_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+      <AdditionalDependencies>$(SolutionDir)build\$(Configuration)\lib\libudis86.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>$(SolutionDir)\copydebug.bat</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MinSpace</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>include;..\shared\include;..\vendor\LUA</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>LUA_BUILD_AS_DLL;_CRT_SECURE_NO_WARNINGS;LUA_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+    </Link>
+    <PostBuildEvent>
+      <Command>$(SolutionDir)\copyrelease.bat</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\shared\include\fnv1.h" />
+    <ClInclude Include="..\shared\include\hooking\hooking.h" />
+    <ClInclude Include="..\shared\include\hooking\jitasm.h" />
+    <ClInclude Include="..\shared\include\hooking\PatternPool.h" />
+    <ClInclude Include="..\shared\include\hooking\udis86.h" />
+    <ClInclude Include="..\shared\include\singleton.h" />
+    <ClInclude Include="..\vendor\LUA\lapi.h" />
+    <ClInclude Include="..\vendor\LUA\lauxlib.h" />
+    <ClInclude Include="..\vendor\LUA\lcode.h" />
+    <ClInclude Include="..\vendor\LUA\lctype.h" />
+    <ClInclude Include="..\vendor\LUA\ldebug.h" />
+    <ClInclude Include="..\vendor\LUA\ldo.h" />
+    <ClInclude Include="..\vendor\LUA\lfunc.h" />
+    <ClInclude Include="..\vendor\LUA\lgc.h" />
+    <ClInclude Include="..\vendor\LUA\llex.h" />
+    <ClInclude Include="..\vendor\LUA\llimits.h" />
+    <ClInclude Include="..\vendor\LUA\lmem.h" />
+    <ClInclude Include="..\vendor\LUA\lobject.h" />
+    <ClInclude Include="..\vendor\LUA\lopcodes.h" />
+    <ClInclude Include="..\vendor\LUA\lparser.h" />
+    <ClInclude Include="..\vendor\LUA\lstate.h" />
+    <ClInclude Include="..\vendor\LUA\lstring.h" />
+    <ClInclude Include="..\vendor\LUA\ltable.h" />
+    <ClInclude Include="..\vendor\LUA\ltm.h" />
+    <ClInclude Include="..\vendor\LUA\lua.h" />
+    <ClInclude Include="..\vendor\LUA\lua.hpp" />
+    <ClInclude Include="..\vendor\LUA\luaconf.h" />
+    <ClInclude Include="..\vendor\LUA\lualib.h" />
+    <ClInclude Include="..\vendor\LUA\lundump.h" />
+    <ClInclude Include="..\vendor\LUA\lvm.h" />
+    <ClInclude Include="..\vendor\LUA\lzio.h" />
+    <ClInclude Include="include/LuaFunctions.h" />
+    <ClInclude Include="include/LuaStateManager.h" />
+    <ClInclude Include="include\M1DEScriptHook.h" />
+    <ClInclude Include="include/PluginSystem.h" />
+    <ClInclude Include="include\ScriptSystem.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\shared\include\hooking\hooking.cpp" />
+    <ClCompile Include="..\vendor\LUA\lapi.c" />
+    <ClCompile Include="..\vendor\LUA\lauxlib.c" />
+    <ClCompile Include="..\vendor\LUA\lbaselib.c" />
+    <ClCompile Include="..\vendor\LUA\lbitlib.c" />
+    <ClCompile Include="..\vendor\LUA\lcode.c" />
+    <ClCompile Include="..\vendor\LUA\lcorolib.c" />
+    <ClCompile Include="..\vendor\LUA\lctype.c" />
+    <ClCompile Include="..\vendor\LUA\ldblib.c" />
+    <ClCompile Include="..\vendor\LUA\ldebug.c" />
+    <ClCompile Include="..\vendor\LUA\ldo.c" />
+    <ClCompile Include="..\vendor\LUA\ldump.c" />
+    <ClCompile Include="..\vendor\LUA\lfunc.c" />
+    <ClCompile Include="..\vendor\LUA\lgc.c" />
+    <ClCompile Include="..\vendor\LUA\linit.c" />
+    <ClCompile Include="..\vendor\LUA\liolib.c" />
+    <ClCompile Include="..\vendor\LUA\llex.c" />
+    <ClCompile Include="..\vendor\LUA\lmathlib.c" />
+    <ClCompile Include="..\vendor\LUA\lmem.c" />
+    <ClCompile Include="..\vendor\LUA\loadlib.c" />
+    <ClCompile Include="..\vendor\LUA\lobject.c" />
+    <ClCompile Include="..\vendor\LUA\lopcodes.c" />
+    <ClCompile Include="..\vendor\LUA\loslib.c" />
+    <ClCompile Include="..\vendor\LUA\lparser.c" />
+    <ClCompile Include="..\vendor\LUA\lstate.c" />
+    <ClCompile Include="..\vendor\LUA\lstring.c" />
+    <ClCompile Include="..\vendor\LUA\lstrlib.c" />
+    <ClCompile Include="..\vendor\LUA\ltable.c" />
+    <ClCompile Include="..\vendor\LUA\ltablib.c" />
+    <ClCompile Include="..\vendor\LUA\ltm.c" />
+    <ClCompile Include="..\vendor\LUA\lua.c" />
+    <ClCompile Include="..\vendor\LUA\luac.c" />
+    <ClCompile Include="..\vendor\LUA\lundump.c" />
+    <ClCompile Include="..\vendor\LUA\lvm.c" />
+    <ClCompile Include="..\vendor\LUA\lzio.c" />
+    <ClCompile Include="src/LuaFunctions.cpp" />
+    <ClCompile Include="src/LuaStateManager.cpp" />
+    <ClCompile Include="src\M1DEScriptHook.cpp" />
+    <ClCompile Include="src/PluginSystem.cpp" />
+    <ClCompile Include="src\ScriptSystem.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

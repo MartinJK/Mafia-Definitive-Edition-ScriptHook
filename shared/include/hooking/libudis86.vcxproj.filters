@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="hooking">
+      <UniqueIdentifier>{3D7F17C2-B5E4-4E0E-A47F-5B856CECC676}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hooking\libudis86">
+      <UniqueIdentifier>{2B273D47-E963-5031-0A5B-7AF5C1ACECF9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hooking">
+      <UniqueIdentifier>{3D7F17C2-B5E4-4E0E-A47F-5B856CECC676}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hooking\libudis86">
+      <UniqueIdentifier>{2B273D47-E963-5031-0A5B-7AF5C1ACECF9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hooking">
+      <UniqueIdentifier>{3D7F17C2-B5E4-4E0E-A47F-5B856CECC676}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hooking\libudis86">
+      <UniqueIdentifier>{2B273D47-E963-5031-0A5B-7AF5C1ACECF9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hooking">
+      <UniqueIdentifier>{3D7F17C2-B5E4-4E0E-A47F-5B856CECC676}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hooking\libudis86">
+      <UniqueIdentifier>{2B273D47-E963-5031-0A5B-7AF5C1ACECF9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hooking">
+      <UniqueIdentifier>{3D7F17C2-B5E4-4E0E-A47F-5B856CECC676}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hooking\libudis86">
+      <UniqueIdentifier>{2B273D47-E963-5031-0A5B-7AF5C1ACECF9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hooking">
+      <UniqueIdentifier>{3D7F17C2-B5E4-4E0E-A47F-5B856CECC676}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hooking\libudis86">
+      <UniqueIdentifier>{2B273D47-E963-5031-0A5B-7AF5C1ACECF9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hooking">
+      <UniqueIdentifier>{3D7F17C2-B5E4-4E0E-A47F-5B856CECC676}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hooking\libudis86">
+      <UniqueIdentifier>{2B273D47-E963-5031-0A5B-7AF5C1ACECF9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hooking">
+      <UniqueIdentifier>{3D7F17C2-B5E4-4E0E-A47F-5B856CECC676}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hooking\libudis86">
+      <UniqueIdentifier>{2B273D47-E963-5031-0A5B-7AF5C1ACECF9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hooking">
+      <UniqueIdentifier>{3D7F17C2-B5E4-4E0E-A47F-5B856CECC676}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hooking\libudis86">
+      <UniqueIdentifier>{2B273D47-E963-5031-0A5B-7AF5C1ACECF9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hooking">
+      <UniqueIdentifier>{3D7F17C2-B5E4-4E0E-A47F-5B856CECC676}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hooking\libudis86">
+      <UniqueIdentifier>{2B273D47-E963-5031-0A5B-7AF5C1ACECF9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hooking">
+      <UniqueIdentifier>{3D7F17C2-B5E4-4E0E-A47F-5B856CECC676}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hooking\libudis86">
+      <UniqueIdentifier>{2B273D47-E963-5031-0A5B-7AF5C1ACECF9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hooking">
+      <UniqueIdentifier>{3D7F17C2-B5E4-4E0E-A47F-5B856CECC676}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hooking\libudis86">
+      <UniqueIdentifier>{2B273D47-E963-5031-0A5B-7AF5C1ACECF9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shared.gyp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="libudis86\decode.c">
+      <Filter>hooking\libudis86</Filter>
+    </ClCompile>
+    <ClCompile Include="libudis86\itab.c">
+      <Filter>hooking\libudis86</Filter>
+    </ClCompile>
+    <ClCompile Include="libudis86\syn.c">
+      <Filter>hooking\libudis86</Filter>
+    </ClCompile>
+    <ClCompile Include="libudis86\syn-att.c">
+      <Filter>hooking\libudis86</Filter>
+    </ClCompile>
+    <ClCompile Include="libudis86\syn-intel.c">
+      <Filter>hooking\libudis86</Filter>
+    </ClCompile>
+    <ClCompile Include="libudis86\udis86.c">
+      <Filter>hooking\libudis86</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="libudis86\decode.h">
+      <Filter>hooking\libudis86</Filter>
+    </ClInclude>
+    <ClInclude Include="libudis86\extern.h">
+      <Filter>hooking\libudis86</Filter>
+    </ClInclude>
+    <ClInclude Include="libudis86\itab.h">
+      <Filter>hooking\libudis86</Filter>
+    </ClInclude>
+    <ClInclude Include="libudis86\syn.h">
+      <Filter>hooking\libudis86</Filter>
+    </ClInclude>
+    <ClInclude Include="libudis86\types.h">
+      <Filter>hooking\libudis86</Filter>
+    </ClInclude>
+    <ClInclude Include="libudis86\udint.h">
+      <Filter>hooking\libudis86</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

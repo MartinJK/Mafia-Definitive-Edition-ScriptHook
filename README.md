@@ -1,5 +1,5 @@
 
-# MPlus - Mafia Definitive Edition ScriptHookis going to replace this Scripthook
+# MPlus - Mafia Definitive Edition ScriptHook is going to replace this Scripthook
 For more information visit
 
 Announcement:

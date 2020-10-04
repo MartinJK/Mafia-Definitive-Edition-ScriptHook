@@ -1,11 +1,13 @@
 
-# MPlus - Mafia Definitive Edition is going to replace this Scripthook
+# MPlus - Mafia Definitive Edition ScriptHookis going to replace this Scripthook
 For more information visit
 
 Announcement:
+
 https://community.nomad-group.net/index.php?/blogs/entry/10-development-blog-10-mplus-mafia-definitive-edition-scripthook/
 
 Trailer:
+
 https://www.youtube.com/watch?v=pQ9HM20a83g
 
 ----
